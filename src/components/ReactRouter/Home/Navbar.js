@@ -38,10 +38,10 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/gallary"
+            to="/products"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            Gallary
+            Products
           </NavLink>
         </li>
       </ul>

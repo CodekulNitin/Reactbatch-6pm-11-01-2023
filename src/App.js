@@ -8,9 +8,8 @@ import About from "./components/ReactRouter/About/About";
 import Navbar from "./components/ReactRouter/Home/Navbar";
 import HomePage from './components/ReactRouter/Home/HomePage'
 import Contact from './components/ReactRouter/ContactUs/Contact'
-import Gallary from './components/ReactRouter/Gallary/Gallary'
-import Main from './components/form/Main'
-import UseParams from "./components/ReactRouter/UseParamas/UseParams";
+
+import Products from "./components/ReactRouter/UseParamas/Products";
 function App() {
   return (
     <div className="App">
@@ -19,8 +18,7 @@ function App() {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/contactUs" element={<Contact />} />
-        <Route path="/gallary" element={<Main />} />
-
+        <Route path="products" element={<Products />} />
       </Routes>
     </div>
   );

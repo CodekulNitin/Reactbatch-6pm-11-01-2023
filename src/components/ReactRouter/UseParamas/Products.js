@@ -1,30 +1,23 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import User from "./User";
 
-function Products({ products }) {
-    let {id} = useParams();
-    const product = products
+function Products() {
+  const params = useParams();
+  const userId = params.userId;
 
-    const {name,img} = product;
-    {console.log(id)}
-  return (
-    <div className="product-box pt-20">
-      <h2 className="title"> Products Component</h2>
-      <div className="box">
-        {/* {Object.entries(products).map(([id, { name, img }]) => (
-          <li key={id}>
-            <Link to={`/product/${id}`}>
-              <h2 className="product-name">{name}</h2>
-              <img src={img} alt={name} />
-            </Link>
-          </li>
-        ))} */}
-           {/* <h2>{slug}</h2> */}
-            <h3>Brand: {name}</h3>
-            <img src={img}  alt={name}/>
-      </div>
+  // https://dev.to/mondal10/react-router-lazy-load-route-components-4df
+  // https://blog.loginradius.com/engineering/react-context-api/
+  
+  return <div className="product-box pt-20">
+    <div>
+      <nav className="mt-12 flex  space-x-3">
+        <Link to='featured' className="border border-blue-900 rounded p-2">Featured</Link>
+        <Link to="new" className="border border-blue-900 rounded p-2">New</Link>
+      </nav>
     </div>
-  );
+  <User />
+  </div>;
 }
 
 export default Products;
