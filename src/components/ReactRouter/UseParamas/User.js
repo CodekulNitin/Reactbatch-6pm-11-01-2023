@@ -13,7 +13,6 @@ function User() {
             className="border rounded p-2 "
             onClick={() => {
               setSerachParams({ filter: "active" });
-              console.log("hiiiiiii");
             }}
           >
             Active Users
@@ -35,7 +34,6 @@ function User() {
         ) : (
           <div>
             <label>All Users</label>
-
             <h2>User1</h2>
             <h2>User2</h2>
             <h2>User3</h2>

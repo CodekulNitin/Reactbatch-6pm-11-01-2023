@@ -44,6 +44,15 @@ function Navbar() {
             Products
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/profilePage"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Profile Page
+          </NavLink>
+        </li>
+
       </ul>
     </div>
   );
